@@ -1,39 +1,37 @@
 function calculateTriangle(){
-    const baseFiled = document.getElementById('triangle-base');
-    const base = parseFloat(baseFiled.value);
-
-    const heightElement = document.getElementById('triangle-height');
-    const height = parseFloat(heightElement.value);
+    const base = getFieldValue('triangle-base');
+    const height = getFieldValue('triangle-height');
 
     const area = 0.5 * base * height;
-    document.getElementById('triangle-area').innerText = area;
+    setElementText('triangle-area', area);
 }
-
 
 function calculateRectangle(){
-    const widthField = document.getElementById('rectangle-width');
-    const width = parseFloat(widthField.value);
-
-    const lengthField = document.getElementById('rectangle-length');
-    const length = parseFloat(lengthField.value);
+    const width = getFieldValue('rectangle-width');
+    const length = getFieldValue('rectangle-length');
 
     const area = width * length;
-    document.getElementById('rectangle-area').innerText = area;
+    setElementText('rectangle-area', area);
 }
-
 
 function calculateParallelogram(){
     const base = getFieldValue('parallelogram-base')
     const height = getFieldValue('parallelogram-height')
 
-    const area = base * height
-    document.getElementById('parallelogram-area').innerText = area;
+    const area = base * height;
+    setElementText('parallelogram-area', area);
 }
 
+
+// Common Functions
 
 function getFieldValue(fieldId){
     const field = document.getElementById(fieldId);
     const value = parseFloat(field.value);
 
     return value;
+}
+
+function setElementText(elementId, value){
+    document.getElementById(elementId).innerText = value;
 }
