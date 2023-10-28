@@ -8,6 +8,7 @@ function calculateTriangle(){
 
     const area = 0.5 * base * height;
     setElementText('triangle-area', area);
+    addToCalculationEntry('Triangle', area);
 }
 
 function calculateRectangle(){
@@ -20,6 +21,7 @@ function calculateRectangle(){
 
     const area = width * length;
     setElementText('rectangle-area', area);
+    addToCalculationEntry('Rectangle', area);
 }
 
 function calculateParallelogram(){
@@ -32,6 +34,7 @@ function calculateParallelogram(){
 
     const area = base * height;
     setElementText('parallelogram-area', area);
+    addToCalculationEntry('Parallelogram',area);
 }
 
 function calculateEllipse(){
@@ -43,7 +46,8 @@ function calculateEllipse(){
     }
 
     const area = Math.PI * aAxis * bAxis;
-    setElementText('ellipse-area', area.toFixed(2))
+    setElementText('ellipse-area', area.toFixed(2));
+    addToCalculationEntry('Ellipse', area.toFixed(2));
 }
 
 
@@ -58,4 +62,16 @@ function getFieldValue(fieldId){
 
 function setElementText(elementId, value){
     document.getElementById(elementId).innerText = value;
+}
+
+function addToCalculationEntry(areaType, areValue){
+    const calculationEntry = document.getElementById('are-calculation-entry');
+    const count = calculationEntry.childElementCount;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td>${count + 1}. ${areaType}</td>
+        <td class="text-center">${areValue} cm<sup>2</sup></td>
+        <td class="text-center"><button onclick="alert('This function is not developed yet!')" class="btn btn-success btn-sm">Convert<button></td> 
+    `
+    calculationEntry.appendChild(tr);
 }
