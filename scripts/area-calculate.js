@@ -22,6 +22,14 @@ function calculateParallelogram(){
     setElementText('parallelogram-area', area);
 }
 
+function calculateEllipse(){
+    const aAxis = getFieldValue('ellipse-a-axis');
+    const bAxis = getFieldValue('ellipse-b-axis');
+
+    const area = Math.PI * aAxis * bAxis;
+    setElementText('ellipse-area', area.toFixed(2))
+}
+
 
 // Common Functions
 
