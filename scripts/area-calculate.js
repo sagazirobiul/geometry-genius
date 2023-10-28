@@ -66,7 +66,6 @@ function calculatePentagon(){
 function calculateRhombus(){
     const diagonal1 = getFieldValue('rhombus-diagonal');
     const diagonal2 = getFieldValue('rhombus-2nd-diagonal');
-    const base = getFieldValue('pentagon-base');
     if(isNaN(diagonal1) || isNaN(diagonal2)){
         alert('Please insert a number!');
         return;
@@ -102,3 +101,6 @@ function addToCalculationEntry(areaType, areValue){
     `
     calculationEntry.appendChild(tr);
 }
+
+
+// The end //
