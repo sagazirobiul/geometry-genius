@@ -89,13 +89,11 @@
                         <h2 class="card-title">Ellipse</h2>
                         <p>Area (A) = πab</p>
                         <div class="justify-center">
-                            <input id="ellipse-a-axis"
-                                class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1" placeholder="a axis"
-                                type="text">
+                            <input id="ellipse-a-axis" class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1"
+                                placeholder="a axis" type="text">
                             <span>cm</span>
-                            <input id="ellipse-b-axis"
-                                class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1" placeholder="b axis"
-                                type="text">
+                            <input id="ellipse-b-axis" class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1"
+                                placeholder="b axis" type="text">
                             <span>cm</span>
                             <p class="text-2xl my-1">Area: <span id="ellipse-area" class="font-bold">0</span>
                                 cm<sup>2</sup></p>
@@ -106,25 +104,43 @@
 
                 <!-- Card 5 -->
                 <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
+                    <figure><img src="images/pentagon.png" alt="Pentagon" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Area (A) = 0.5 X p X b</p>
+                        <div class="justify-center">
+                            <input id="pentagon-perimeter"
+                                class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1" placeholder="perimeter"
+                                type="text">
+                            <span>cm</span>
+                            <input id="pentagon-base" class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1"
+                                placeholder="base" type="text">
+                            <span>cm</span>
+                            <p class="text-2xl my-1">Area: <span id="pentagon-area" class="font-bold">0</span>
+                                cm<sup>2</sup></p>
                         </div>
+                        <button onclick="calculatePentagon()" class="btn btn-primary">Calculate</button>
                     </div>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="card bg-base-100 shadow-xl">
-                    <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+                    <figure><img src="images/rhombus.png" alt="Rhombus" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                        <div class="justify-center">
+                            <input id="rhombus-diagonal"
+                                class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1" placeholder="diagonal"
+                                type="text">
+                            <span>cm</span>
+                            <input id="rhombus-2nd-diagonal" class="bg-gray-200 outline-none py-1 px-2 rounded-sm w-4/12 mx-1"
+                                placeholder="diagonal" type="text">
+                            <span>cm</span>
+                            <p class="text-2xl my-1">Area: <span id="rhombus-area" class="font-bold">0</span>
+                                cm<sup>2</sup></p>
                         </div>
+                        <button onclick="calculateRhombus()" class="btn btn-primary">Calculate</button>
                     </div>
                 </div>
             </div>

@@ -50,6 +50,33 @@ function calculateEllipse(){
     addToCalculationEntry('Ellipse', area.toFixed(2));
 }
 
+function calculatePentagon(){
+    const perimeter = getFieldValue('pentagon-perimeter');
+    const base = getFieldValue('pentagon-base');
+    if(isNaN(perimeter) || isNaN(base)){
+        alert('Please insert a number!');
+        return;
+    }
+
+    const area = 0.5 * perimeter * base;
+    setElementText('pentagon-area', area);
+    addToCalculationEntry('Pentagon', area);
+}
+
+function calculateRhombus(){
+    const diagonal1 = getFieldValue('rhombus-diagonal');
+    const diagonal2 = getFieldValue('rhombus-2nd-diagonal');
+    const base = getFieldValue('pentagon-base');
+    if(isNaN(diagonal1) || isNaN(diagonal2)){
+        alert('Please insert a number!');
+        return;
+    }
+
+    const area = (diagonal1 * diagonal2) / 2;
+    setElementText('rhombus-area', area);
+    addToCalculationEntry('Rhombus', area);
+}
+
 
 // Common Functions
 
